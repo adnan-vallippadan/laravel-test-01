@@ -23,3 +23,19 @@ Route::get('/test', function(){
 Route::get('/{id}/from-controller', 'PageController@testFunction');
 
 Route::resource('/res-test', 'RController');
+
+Route::get('/form', 'FormController@index');
+
+Route::post('/form', 'FormController@store');
+
+Route::get('/submit-form', 'FormController@store');
+
+Route::get('/data', function () {
+    $data = "123";
+    return view('data', compact('data'));
+});
+
+Route::get('/data-2', function () {
+    $data = "Test";
+    return view('data', ['data' => $data]);
+});
