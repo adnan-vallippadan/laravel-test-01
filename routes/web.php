@@ -39,3 +39,13 @@ Route::get('/data-2', function () {
     $data = "Test";
     return view('data', ['data' => $data]);
 });
+
+Route::get('/my-page-1', function() {    
+    return "Test";
+});
+
+Route::get('/my-test-route/{id}', 'SiteController@index');
+
+Route::resource('/resource', 'Site\SiteController');
+
+Route::get('/req-data', 'Site\SiteController@testRequestData');
