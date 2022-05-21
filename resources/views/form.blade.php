@@ -25,7 +25,8 @@
                 </ul>
             </div>
         @endif
-        <form class="form-horizontal" action="/submit-form">
+        <form class="form-horizontal" action="/form" method="POST">
+            {{ csrf_field() }}
             <div class="form-group">
                 <label class="control-label col-sm-2" for="name">Name:</label>
                 <div class="col-sm-10">
