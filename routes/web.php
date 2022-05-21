@@ -49,3 +49,11 @@ Route::get('/my-test-route/{id}', 'SiteController@index');
 Route::resource('/resource', 'Site\SiteController');
 
 Route::get('/req-data', 'Site\SiteController@testRequestData');
+
+Route::get('/blade-child', function() {
+    return view('extension.child');
+});
+
+Route::get('/add-user', 'DatabaseController@addUser');
+
+Route::get('/users', 'DatabaseController@showData');
